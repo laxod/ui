@@ -1,0 +1,120 @@
+.laxod-dialog-overlay {
+  background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  inset: 0;
+  animation: laxod-fadeIn 150ms ease-out;
+  z-index: 50;
+}
+
+.laxod-dialog-content {
+  background-color: var(--ui-bg-color);
+  border: 2px solid rgba(255, 255, 255, 0.03);
+  border-radius: var(--ui-border-radius);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 90vw;
+  max-width: 450px;
+  max-height: 85vh;
+  padding: 24px;
+  z-index: 51;
+  overflow-y: auto;
+  box-sizing: border-box;
+  transform: translate(-50%, -50%) scale(0);
+  animation: laxod-bounce-scale-dialog 0.7s ease-out forwards;
+}
+
+.laxod-dialog-title {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+  padding-right: 32px;
+}
+
+.laxod-dialog-description {
+  margin-top: 8px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.laxod-dialog-body {
+  margin-top: 16px;
+  color: rgba(255, 255, 255, 0.9);
+  padding: 2px;
+}
+
+.laxod-dialog-body input,
+.laxod-dialog-body textarea,
+.laxod-dialog-body select {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.laxod-dialog-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 18px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.8);
+  transition: all 0.1s ease-in-out;
+}
+
+.laxod-dialog-close:hover:not(.ui-btn-disabled) {
+  filter: brightness(1.1);
+  transform: scale(1.015);
+}
+
+.laxod-dialog-close:active:not(.ui-btn-disabled) {
+  transform: scale(0.95);
+  filter: brightness(0.9);
+}
+
+@keyframes laxod-fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes laxod-slideIn {
+  from { 
+    opacity: 0;
+    transform: translate(-50%, -48%) scale(0.96);
+  }
+  to { 
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@keyframes laxod-bounce-scale-dialog {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.3);
+  }
+  25% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.05);
+  }
+  40% {
+    transform: translate(-50%, -50%) scale(0.95);
+  }
+  60% {
+    transform: translate(-50%, -50%) scale(1.025);
+  }
+  80% {
+    transform: translate(-50%, -50%) scale(0.99);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}

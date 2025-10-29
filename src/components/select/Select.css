@@ -1,0 +1,203 @@
+.laxod-select-trigger {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 10px 16px;
+  font-size: 16px;
+  font-family: inherit;
+  font-weight: 400;
+  border: 2px solid rgba(255, 255, 255, 0.17);
+  border-radius: var(--ui-border-radius);
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+  color: white;
+  background-color: rgba(255, 255, 255, 0.05);
+  outline: none;
+  user-select: none;
+  min-width: 200px;
+}
+
+.laxod-select-trigger:hover:not([data-disabled]) {
+  border-color: rgba(255, 255, 255, 0.25);
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.laxod-select-trigger:focus-visible {
+  outline: 2px solid rgba(255, 255, 255, 0.1);
+  outline-offset: 2px;
+}
+
+.laxod-select-trigger[data-state="open"] {
+  border-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.laxod-select-trigger[data-disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.laxod-select-trigger-content {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+  min-width: 0;
+}
+
+.laxod-select-trigger-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+}
+
+.laxod-select-trigger-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.laxod-select-trigger-label {
+  flex: 1;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.laxod-select-trigger[data-placeholder] .laxod-select-trigger-label {
+  opacity: 0.5;
+}
+
+.laxod-select-trigger-chevron {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  transition: transform 0.2s ease;
+}
+
+.laxod-select-trigger-chevron svg {
+  width: 100%;
+  height: 100%;
+}
+
+.laxod-select-trigger[data-state="open"] .laxod-select-trigger-chevron {
+  transform: rotate(180deg);
+}
+
+.laxod-select-full-width {
+  width: 100%;
+}
+
+.laxod-select-content {
+  background-color: rgba(16, 31, 30, 0.98);
+  border-radius: var(--ui-border-radius);
+  border: 2px solid rgba(255, 255, 255, 0.17);
+  box-shadow: 0 10px 38px -10px rgba(0, 0, 0, 0.35),
+    0 10px 20px -15px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  user-select: none;
+  width: var(--radix-select-trigger-width);
+  max-height: 320px;
+}
+
+.laxod-select-content[data-side="top"],
+.laxod-select-content[data-side="bottom"],
+.laxod-select-content[data-side="left"],
+.laxod-select-content[data-side="right"] {
+  animation: bounce-scale 0.7s ease-out forwards;
+  transform-origin: center;
+}
+
+.laxod-select-viewport {
+  padding: 6px;
+}
+
+.laxod-select-item {
+  all: unset;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 10px 12px;
+  font-size: 15px;
+  font-family: inherit;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+  position: relative;
+  user-select: none;
+}
+
+.laxod-select-item:hover:not([data-disabled]) {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.laxod-select-item:active:not([data-disabled]) {
+  transform: scale(0.98);
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.laxod-select-item:focus {
+  outline: 2px solid rgba(255, 255, 255, 0.1);
+  outline-offset: -2px;
+}
+
+.laxod-select-item[data-disabled] {
+  opacity: 0.4;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.laxod-select-item-content {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+  min-width: 0;
+}
+
+.laxod-select-item-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+}
+
+.laxod-select-item-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.laxod-select-item-label {
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.laxod-select-item-check {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  color: var(--ui-success-color);
+}
+
+.laxod-select-item-check svg {
+  width: 100%;
+  height: 100%;
+}

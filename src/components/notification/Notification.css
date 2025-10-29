@@ -1,0 +1,190 @@
+.notification-root {
+  position: fixed;
+  top: var(--ui-spacing-md);
+  right: var(--ui-spacing-md);
+  width: 380px;
+  max-width: calc(100vw - 32px);
+  pointer-events: none;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.notification-toast {
+  position: absolute;
+  right: 0;
+  width: 100%;
+  box-sizing: border-box;
+  pointer-events: auto;
+  background: var(--ui-bg-color);
+  color: #ffffff;
+  border-radius: var(--ui-border-radius);
+  padding: var(--ui-spacing-md);
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  min-height: 72px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  opacity: 0;
+  transform: translateX(100%) scale(0.9);
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.notification-root {
+  position: fixed;
+  bottom: var(--ui-spacing-md);  /* Changed from top to bottom */
+  right: var(--ui-spacing-md);
+  width: 380px;
+  max-width: calc(100vw - 32px);
+  pointer-events: none;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column-reverse;  /* Reverse so new ones appear at bottom */
+  gap: 0;
+}
+
+.notification-toast {
+  position: absolute;
+  right: 0;
+  width: 100%;
+  box-sizing: border-box;
+  pointer-events: auto;
+  background: var(--ui-bg-color);
+  color: #ffffff;
+  border-radius: var(--ui-border-radius);
+  padding: var(--ui-spacing-md);
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  min-height: 72px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  opacity: 0;
+  transform: scale(0.8);  /* Start smaller */
+  transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.notification-toast.notification-visible {
+  opacity: 1;
+  transform: scale(1);  /* Scale to normal size */
+}
+
+.notification-toast.notification-exiting {
+  opacity: 0;
+  transform: scale(0.8);  /* Scale down when closing */
+  transition: all 0.25s cubic-bezier(0.4, 0, 1, 1);
+}
+
+.notification-icon {
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  background: var(--ui-flat-color);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.notification-body {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+  flex: 1;
+  padding-top: 2px;
+}
+
+.notification-title {
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 1.4;
+  color: #ffffff;
+}
+
+.notification-description {
+  font-size: 14px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.85);
+  word-wrap: break-word;
+}
+
+.notification-close {
+  all: unset;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  color: rgba(255, 255, 255, 0.6);
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.notification-close:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.notification-close:active {
+  transform: scale(0.95);
+}
+
+.notification-type-success .notification-icon {
+  color: var(--ui-success-color);
+  background: rgba(46, 124, 76, 0.12);
+  border-color: rgba(46, 124, 76, 0.2);
+}
+
+.notification-type-error .notification-icon {
+  color: var(--ui-destructive-color);
+  background: rgba(170, 71, 86, 0.12);
+  border-color: rgba(170, 71, 86, 0.2);
+}
+
+.notification-type-warning .notification-icon {
+  color: var(--ui-warning-color);
+  background: rgba(145, 103, 54, 0.12);
+  border-color: rgba(145, 103, 54, 0.2);
+}
+
+.notification-type-info .notification-icon {
+  color: var(--ui-primary-color);
+  background: rgba(49, 121, 91, 0.12);
+  border-color: rgba(49, 121, 91, 0.2);
+}
+
+.notification-type-default .notification-icon {
+  color: var(--ui-secondary-color);
+  background: rgba(71, 110, 141, 0.12);
+  border-color: rgba(71, 110, 141, 0.2);
+}
+
+@media (max-width: 640px) {
+  .notification-root {
+    left: var(--ui-spacing-md);
+    right: var(--ui-spacing-md);
+    width: auto;
+  }
+
+  .notification-toast {
+    width: 100%;
+  }
+}
+
+@keyframes slideOut {
+  to {
+    opacity: 0;
+    transform: translateX(120%) scale(0.9);
+  }
+}

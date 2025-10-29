@@ -1,0 +1,68 @@
+:root {
+  --ui-primary-color: #31795b;
+  --ui-secondary-color: #476e8d;
+  --ui-success-color: #2e7c4c;
+  --ui-destructive-color: #aa4756;
+  --ui-warning-color: #916736;
+  --ui-flat-color: rgba(150, 143, 143, 0.1);
+  --ui-outline-color: transparent;
+  --ui-bg-color: #101f1e;
+  --ui-border-radius: 14px;
+  --ui-spacing-sm: 8px;
+  --ui-spacing-md: 16px;
+  --ui-font-size-base: 16px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--ui-primary-color);
+  border-radius: var(--ui-border-radius);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--ui-success-color);
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+* {
+  scrollbar-width: auto;
+  scrollbar-color: var(--ui-primary-color) var(--ui-bg-color);
+}
+
+::-webkit-scrollbar-button {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+@keyframes bounce-scale {
+  0% {
+    opacity: 0;
+    transform: scale(0.4);
+  }
+  25% {
+    opacity: 1;
+    transform: scale(1.06); 
+  }
+  40% {
+    transform: scale(0.92);
+  }
+  60% {
+    transform: scale(1.04);
+  }
+  75% {
+    transform: scale(0.98);
+  }
+
+  90% {
+    transform: scale(0.995);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

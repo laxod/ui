@@ -1,0 +1,131 @@
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ui-spacing-sm);
+  width: 100%;
+}
+
+.input-fullwidth {
+  width: 100%;
+}
+
+.input-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.9); 
+  cursor: pointer;
+}
+
+.input-container {
+  position: relative;
+  width: 100%;
+}
+
+.input {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: var(--ui-font-size-base);
+  line-height: 1.5;
+  color: white; 
+  background: var(--ui-bg-color);
+  border: 1px solid var(--ui-flat-color);
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+  font-family: inherit;
+}
+
+.input-with-icon {
+  padding-right: 2.5rem;
+}
+
+.input::placeholder {
+  color: rgba(150, 143, 143, 0.5);
+}
+
+.input:hover:not(:disabled) {
+  border-color: var(--ui-secondary-color); 
+  background: rgba(150, 143, 143, 0.05);
+}
+
+.input:focus {
+  border-color: var(--ui-primary-color); 
+  box-shadow: 0 0 0 3px rgba(49, 121, 91, 0.15); 
+  background: rgba(150, 143, 143, 0.05);
+}
+
+.input:focus-visible {
+  outline: 2px solid white; 
+  outline-offset: 2px;
+  box-shadow: 0 0 0 3px rgba(49, 121, 91, 0.15); 
+}
+
+.input:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  background: rgba(150, 143, 143, 0.05);
+}
+
+.input-error {
+  border-color: var(--ui-destructive-color);
+}
+
+.input-error:focus,
+.input-error:focus-visible {
+  border-color: var(--ui-destructive-color);
+  box-shadow: 0 0 0 3px rgba(170, 71, 86, 0.15); 
+  outline: none;
+}
+
+.input-success {
+  border-color: var(--ui-success-color);
+}
+
+.input-success:focus,
+.input-success:focus-visible {
+  border-color: var(--ui-success-color);
+  box-shadow: 0 0 0 3px rgba(46, 124, 76, 0.15); 
+  outline: none; 
+}
+
+.input-icon {
+  position: absolute;
+  right: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.input-icon-error {
+  color: var(--ui-destructive-color);
+}
+
+.input-icon-success {
+  color: var(--ui-success-color);
+}
+
+.input-message {
+  font-size: 13px;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.input-message-error {
+  color: var(--ui-destructive-color);
+}
+
+.input-message-helper {
+  color: rgba(255, 255, 255, 0.6); 
+}
+
+.input:-webkit-autofill,
+.input:-webkit-autofill:hover,
+.input:-webkit-autofill:focus {
+  -webkit-text-fill-color: white; 
+  -webkit-box-shadow: 0 0 0 1000px var(--ui-bg-color) inset;
+  transition: background-color 5000s ease-in-out 0s;
+  border-color: var(--ui-primary-color);
+}

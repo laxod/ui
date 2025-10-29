@@ -1,0 +1,128 @@
+.textarea-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ui-spacing-sm);
+  width: 100%;
+}
+
+.textarea-fullwidth {
+  width: 100%;
+}
+
+.textarea-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.9);
+  cursor: pointer;
+}
+
+.textarea-container {
+  position: relative;
+  width: 100%;
+}
+
+.textarea {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: var(--ui-font-size-base);
+  line-height: 1.5;
+  color: white; 
+  background: var(--ui-bg-color);
+  border: 1px solid var(--ui-flat-color);
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+  font-family: inherit;
+  resize: vertical;
+  min-height: 80px;
+}
+
+.textarea::placeholder {
+  color: rgba(150, 143, 143, 0.5);
+}
+
+.textarea:hover:not(:disabled) {
+  border-color: var(--ui-secondary-color); 
+  background: rgba(150, 143, 143, 0.05);
+}
+
+.textarea:focus {
+  border-color: var(--ui-primary-color); 
+  box-shadow: 0 0 0 3px rgba(49, 121, 91, 0.15); 
+  background: rgba(150, 143, 143, 0.05);
+}
+
+.textarea:focus-visible {
+  outline: 2px solid white; 
+  outline-offset: 2px;
+  box-shadow: 0 0 0 3px rgba(49, 121, 91, 0.15);
+}
+
+.textarea:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  background: rgba(150, 143, 143, 0.05);
+}
+
+.textarea-error {
+  border-color: var(--ui-destructive-color);
+}
+
+.textarea-error:focus,
+.textarea-error:focus-visible {
+  border-color: var(--ui-destructive-color);
+  box-shadow: 0 0 0 3px rgba(170, 71, 86, 0.15); 
+  outline: none; 
+}
+
+.textarea-success {
+  border-color: var(--ui-success-color);
+}
+
+.textarea-success:focus,
+.textarea-success:focus-visible {
+  border-color: var(--ui-success-color);
+  box-shadow: 0 0 0 3px rgba(46, 124, 76, 0.15); 
+  outline: none; 
+}
+
+.textarea-icon {
+  position: absolute;
+  right: 0.75rem;
+  top: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.textarea-icon-error {
+  color: var(--ui-destructive-color);
+}
+
+.textarea-icon-success {
+  color: var(--ui-success-color);
+}
+
+.textarea-message {
+  font-size: 13px;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.textarea-message-error {
+  color: var(--ui-destructive-color);
+}
+
+.textarea-message-helper {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.textarea:-webkit-autofill,
+.textarea:-webkit-autofill:hover,
+.textarea:-webkit-autofill:focus {
+  -webkit-text-fill-color: white; 
+  -webkit-box-shadow: 0 0 0 1000px var(--ui-bg-color) inset;
+  transition: background-color 5000s ease-in-out 0s;
+  border-color: var(--ui-primary-color);
+}

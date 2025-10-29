@@ -1,0 +1,107 @@
+.ui-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-family: inherit;
+  font-weight: 500;
+  text-decoration: none;
+  border: 1.5px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  white-space: nowrap;
+  user-select: none;
+  color: white;
+  transition: all 0.2s ease-in-out;
+}
+
+.ui-badge-primary {
+  background-color: var(--ui-primary-color);
+
+}
+
+.ui-badge-secondary {
+  background-color: var(--ui-secondary-color);
+
+}
+
+.ui-badge-success {
+  background-color: var(--ui-success-color);
+}
+
+.ui-badge-destructive {
+  background-color: var(--ui-destructive-color);
+}
+
+.ui-badge-warning {
+  background-color: var(--ui-warning-color);
+}
+
+.ui-badge-flat {
+  background-color: var(--ui-flat-color);
+}
+
+.ui-badge-outline {
+  background-color: transparent;
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.ui-badge-sm {
+  padding: 2px 8px;
+  font-size: 12px;
+  border-radius: 8px;
+}
+
+.ui-badge-md {
+  padding: 4px 12px;
+  font-size: 13px;
+  border-radius: 10px;
+}
+
+.ui-badge-lg {
+  padding: 6px 14px;
+  font-size: 14px;
+  border-radius: 12px;
+}
+
+.ui-badge-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.ui-badge-icon svg {
+  width: 1em;
+  height: 1em;
+}
+
+.ui-badge-remove {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 14px;
+  height: 14px;
+  margin-left: 4px;
+  margin-right: -2px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.15s ease-in-out;
+  background-color: rgba(255, 255, 255, 0.15);
+  flex-shrink: 0;
+}
+
+.ui-badge-remove:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  transform: scale(1.15);
+}
+
+.ui-badge-remove:active {
+  transform: scale(0.9);
+}
+
+.ui-badge-remove svg {
+  width: 8px;
+  height: 8px;
+}

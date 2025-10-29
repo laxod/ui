@@ -1,0 +1,203 @@
+.laxod-button {
+  position: relative;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px 16px;
+  font-size: 16px;
+  font-family: inherit;
+  font-weight: 500;
+  text-decoration: none;
+  border: 2px solid rgba(255, 255, 255, 0.17);
+  border-radius: var(--ui-border-radius);
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.1s ease-in-out;
+  color: white !important;
+  white-space: nowrap;
+  user-select: none;
+  background-color: transparent;
+  outline: none;
+  transform-origin: center center;
+  will-change: transform;
+  backface-visibility: hidden;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+
+.laxod-button-hover-effect::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    80px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 0.15) 45%,
+    transparent 75%
+  );
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  pointer-events: none;
+}
+
+.laxod-button-hover-effect:hover::before {
+  opacity: 1;
+}
+
+.laxod-button:hover {
+  border-color: rgba(255, 255, 255, 0.07);
+}
+
+.laxod-button:focus {
+  outline: none;
+}
+
+.laxod-button:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.laxod-button:focus-visible {
+  outline: 2px solid rgba(255, 255, 255, 0.5) !important; 
+  outline-offset: 2px;
+}
+
+.laxod-button:hover:not(.laxod-button-disabled) {
+  filter: brightness(1.1);
+  transform: scale(1.015);
+}
+
+.laxod-button:active:not(.laxod-button-disabled) {
+  transform: scale(0.95);
+  filter: brightness(0.8);
+}
+
+.laxod-button-primary {
+  background-color: var(--ui-primary-color);
+}
+
+.laxod-button-secondary {
+  background-color: var(--ui-secondary-color);
+}
+
+.laxod-button-success {
+  background-color: var(--ui-success-color);
+}
+
+.laxod-button-destructive {
+  background-color: var(--ui-destructive-color);
+}
+
+.laxod-button-warning {
+  background-color: var(--ui-warning-color);
+}
+
+.laxod-button-flat {
+  background-color: var(--ui-flat-color);
+  border-color: transparent;
+}
+
+.laxod-button-flat:hover:not(.laxod-button-disabled) {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-color: transparent;
+}
+
+.laxod-button-outline {
+  background-color: transparent;
+  border-color: rgba(255, 255, 255, 0.3);
+  color: white !important;
+}
+
+.laxod-button-outline:hover:not(.laxod-button-disabled) {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.laxod-button-sm {
+  padding: 6px 10px;
+  font-size: 13px;
+    font-weight: 300;
+  border-radius: 10px;
+}
+
+.laxod-button-md {
+  padding: 10px 18px;
+  font-size: 16px;
+}
+
+.laxod-button-lg {
+  padding: 14px 20px;
+  font-size: 18px;
+  border-radius: 18px;
+}
+
+.laxod-button-disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.laxod-button-full-width {
+  width: 100%;
+}
+
+.laxod-button-loading {
+  position: relative;
+}
+
+
+.laxod-button-gradient {
+  pointer-events: none;
+  position: absolute;
+  inset: -1px;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  border-radius: inherit;
+}
+
+.laxod-button:hover:not(.laxod-button-disabled) .laxod-button-gradient {
+  opacity: 0.8;
+}
+
+
+.laxod-button-spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: laxod-button-spin-pulse 0.4s linear infinite;
+}
+
+@keyframes laxod-button-spin-pulse {
+  0% {
+    transform: rotate(0deg) ;
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg) ;
+  }
+}
+
+.laxod-button-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.laxod-button-icon svg {
+  width: 1em;
+  height: 1em;
+}
+
+.laxod-button-primary,
+.laxod-button-secondary,
+.laxod-button-success,
+.laxod-button-destructive,
+.laxod-button-warning {
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
