@@ -1,9 +1,14 @@
 <div align="center">
   <img width="212" src="https://github.com/user-attachments/assets/ae74a187-b46c-4643-aec6-8bf5d58baae4" alt="Laxod UI Logo" />
+    <p>
+    <a href="https://www.npmjs.com/package/laxod">
+      <img src="https://img.shields.io/npm/v/laxod?color=blue&label=npm" alt="npm version" />
+    </a>
+  </p>
   <h1>Laxod UI</h1>
-  <p>A fancy component library for react</p>
-
+  <p>A fancy component library for React</p>
 </div>
+
 
 # Installation
 
