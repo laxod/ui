@@ -4,6 +4,10 @@
     <a href="https://www.npmjs.com/package/laxod">
       <img src="https://img.shields.io/npm/v/laxod?color=blue&label=npm" alt="npm version" />
     </a>
+      <a href="https://www.npmjs.com/package/laxod">
+  <img src="https://img.shields.io/npm/dm/laxod?color=blue&label=downloads" alt="npm downloads" />
+</a>
+
   </p>
   <h1>Laxod UI</h1>
   <p>A fancy component library for React</p>
