@@ -35,9 +35,8 @@ export const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
     ref
   ) => {
     const textareaId = id || label?.toLowerCase().replace(/\s+/g, "-");
-    const currentValue = value || "";
     const hasError = !!error;
-    const isValid = !hasError && (currentValue as string).length > 0;
+    const isValid = !hasError && value && (value as string).length > 0;
     const playWriteSound = useSound(typeSound);
 
     const isClient = typeof window !== "undefined";
@@ -61,7 +60,7 @@ export const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
             id={textareaId}
             rows={rows}
             {...(isClient && { onChange: handleChange })}
-            value={currentValue}
+            value={value}
             className={`textarea ${hasError ? "textarea-error" : ""} ${
               isValid && success ? "textarea-success" : ""
             } ${className}`.trim()}
