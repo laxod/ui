@@ -1,7 +1,7 @@
 import { forwardRef, TextareaHTMLAttributes } from "react";
 import { AlertCircle, CheckCircle2 } from "lucide-react";
 import "./Textarea.css";
-import { useSound } from "../../hooks/useSound";
+import { useSound } from "../../utils/sounds";
 import { typeSound } from "../../utils/sounds";
 
 export interface TextareaProps

@@ -1,7 +1,7 @@
 import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
 import { DropdownProps } from "./Dropdown.types";
 import "./Dropdown.css";
-import { useSound } from "../../hooks/useSound";
+import { useSound } from "../../utils/sounds";
 import { clickSound } from "../../utils/sounds";
 import { Button } from "../button";
 

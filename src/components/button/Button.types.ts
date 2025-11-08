@@ -21,6 +21,8 @@ export interface ButtonProps {
   loading?: boolean;
   leftIcon?: ReactNode;
   rightIcon?: ReactNode;
+  soundEnabled?: boolean;
+  soundSrc?: string;
   className?: string;
   onClick?: (e: SyntheticEvent) => void;
   href?: string;

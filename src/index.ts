@@ -9,3 +9,4 @@ export * from "./components/textarea";
 export * from "./components/dropdown";
 export * from "./components/select";
 export * from "./components/notification";
+export * from "./utils/sounds";

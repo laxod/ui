@@ -1,6 +1,6 @@
 {
   "name": "laxod",
-  "version": "1.0.11",
+  "version": "1.0.14",
   "repository": {
     "type": "git",
     "url": "https://github.com/laxod/ui.git"
@@ -40,7 +40,7 @@
     "prepublishOnly": "npm run build"
   },
   "peerDependencies": {
-    "lucide-react": "^0.548.0",
+    "lucide-react": ">=0.517.0",
     "react": "^18.0.0 || ^19.0.0",
     "react-dom": "^18.0.0 || ^19.0.0"
   },

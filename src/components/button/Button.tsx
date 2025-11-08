@@ -1,6 +1,6 @@
 import { ButtonProps } from "./Button.types";
 import "./Button.css";
-import { useSound } from "../../hooks/useSound";
+import { useSound } from "../../utils/sounds";
 import { ExternalLink } from "lucide-react";
 import { clickSound } from "../../utils/sounds";
 import * as React from "react";
@@ -19,6 +19,8 @@ export const Button = React.forwardRef<
       disabled = false,
       fullWidth = false,
       loading = false,
+      soundEnabled = true,
+      soundSrc,
       leftIcon,
       rightIcon,
       className = "",
@@ -31,7 +33,7 @@ export const Button = React.forwardRef<
     const shouldShowHoverEffect =
       hoverEffect !== undefined ? hoverEffect : variant === "primary";
 
-    const playClickSound = useSound(clickSound);
+    const playClickSound = useSound(soundSrc || clickSound);
 
     const handleMouseMove = (
       e: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>
@@ -51,7 +53,10 @@ export const Button = React.forwardRef<
         return;
       }
 
-      playClickSound();
+      if (soundEnabled) {
+        playClickSound();
+      }
+
       if (onClick) {
         onClick(e);
       }
@@ -103,8 +108,7 @@ export const Button = React.forwardRef<
         props.href.startsWith("https://") ||
         props.href.startsWith("mailto:"));
 
-const Component: any = ComponentProp || (props.href ? "a" : "button");
-
+    const Component: any = ComponentProp || (props.href ? "a" : "button");
 
     const content = (
       <>

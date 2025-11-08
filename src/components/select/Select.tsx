@@ -1,7 +1,7 @@
 import * as SelectMenu from "@radix-ui/react-select";
 import { SelectProps } from "./Select.types";
 import "./Select.css";
-import { useSound } from "../../hooks/useSound";
+import { useSound } from "../../utils/sounds";
 import { clickSound } from "../../utils/sounds";
 
 const ChevronIcon = () => (
