@@ -26,10 +26,6 @@
 
 }
 
-.ui-badge-success {
-  background-color: var(--ui-success-color);
-}
-
 .ui-badge-destructive {
   background-color: var(--ui-destructive-color);
 }

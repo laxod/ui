@@ -5,7 +5,6 @@ export interface BadgeProps {
   variant?:
     | "primary"
     | "secondary"
-    | "success"
     | "destructive"
     | "warning"
     | "outline"

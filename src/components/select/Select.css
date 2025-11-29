@@ -194,7 +194,7 @@
   flex-shrink: 0;
   width: 18px;
   height: 18px;
-  color: var(--ui-success-color);
+  color: var(--ui-primary-color);
 }
 
 .laxod-select-item-check svg {

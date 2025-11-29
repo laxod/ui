@@ -7,7 +7,6 @@ export interface ButtonProps {
   variant?:
     | "primary"
     | "secondary"
-    | "success"
     | "destructive"
     | "warning"
     | "flat"

@@ -30,7 +30,7 @@ export const Dropdown = ({
   };
 
   return (
-    <DropdownMenu.Root>
+    <DropdownMenu.Root modal={false}>
       <DropdownMenu.Trigger
         asChild={true}
         className={`laxod-dropdown-trigger ${className}`}
@@ -44,7 +44,7 @@ export const Dropdown = ({
           align={align}
           side={side}
           sideOffset={sideOffset}
-          collisionPadding={8}>
+          avoidCollisions={true}>
           {items.map((item) => (
             <DropdownMenu.Item
               key={item.value}

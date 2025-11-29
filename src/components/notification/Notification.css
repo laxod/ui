@@ -36,14 +36,14 @@
 
 .notification-root {
   position: fixed;
-  bottom: var(--ui-spacing-md);  /* Changed from top to bottom */
+  bottom: var(--ui-spacing-md); 
   right: var(--ui-spacing-md);
   width: 380px;
   max-width: calc(100vw - 32px);
   pointer-events: none;
   z-index: 9999;
   display: flex;
-  flex-direction: column-reverse;  /* Reverse so new ones appear at bottom */
+  flex-direction: column-reverse;  
   gap: 0;
 }
 
@@ -66,18 +66,18 @@
   -webkit-backdrop-filter: blur(12px);
 
   opacity: 0;
-  transform: scale(0.8);  /* Start smaller */
+  transform: scale(0.8);  
   transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .notification-toast.notification-visible {
   opacity: 1;
-  transform: scale(1);  /* Scale to normal size */
+  transform: scale(1); 
 }
 
 .notification-toast.notification-exiting {
   opacity: 0;
-  transform: scale(0.8);  /* Scale down when closing */
+  transform: scale(0.8); 
   transition: all 0.25s cubic-bezier(0.4, 0, 1, 1);
 }
 
@@ -141,7 +141,7 @@
 }
 
 .notification-type-success .notification-icon {
-  color: var(--ui-success-color);
+  color: var(--ui-primary-highlighted-color);
   background: rgba(46, 124, 76, 0.12);
   border-color: rgba(46, 124, 76, 0.2);
 }

@@ -1,4 +1,7 @@
+
+
 <div align="center">
+<a href="https://laxod.com">
   <img width="212" src="https://github.com/user-attachments/assets/ae74a187-b46c-4643-aec6-8bf5d58baae4" alt="Laxod UI Logo" />
     <p>
     <a href="https://www.npmjs.com/package/laxod">
@@ -6,6 +9,7 @@
     </a>
       <a href="https://www.npmjs.com/package/laxod">
   <img src="https://img.shields.io/npm/dm/laxod?color=blue&label=downloads" alt="npm downloads" />
+  </a>
 </a>
 
   </p>
@@ -27,7 +31,7 @@ npm install lucide-react
 ```
 <br>
 
-> [!NOTE]
+
 > All components are included in the library.  
 > You don't have to install them one by one.  
 

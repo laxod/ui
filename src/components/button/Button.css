@@ -80,10 +80,6 @@
   background-color: var(--ui-secondary-color);
 }
 
-.laxod-button-success {
-  background-color: var(--ui-success-color);
-}
-
 .laxod-button-destructive {
   background-color: var(--ui-destructive-color);
 }
@@ -195,7 +191,6 @@
 
 .laxod-button-primary,
 .laxod-button-secondary,
-.laxod-button-success,
 .laxod-button-destructive,
 .laxod-button-warning {
   border-color: rgba(255, 255, 255, 0.1) !important;

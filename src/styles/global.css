@@ -1,12 +1,12 @@
 :root {
-  --ui-primary-color: #31795b;
-  --ui-secondary-color: #476e8d;
-  --ui-success-color: #2e7c4c;
-  --ui-destructive-color: #aa4756;
-  --ui-warning-color: #916736;
+  --ui-primary-color: #066762;
+  --ui-primary-highlighted-color: #0c9790;
+  --ui-secondary-color: #225d66;
+  --ui-destructive-color: #ea4956;
+  --ui-warning-color: #ea7649;
   --ui-flat-color: rgba(150, 143, 143, 0.1);
   --ui-outline-color: transparent;
-  --ui-bg-color: #101f1e;
+  --ui-bg-color: #002325;
   --ui-border-radius: 14px;
   --ui-spacing-sm: 8px;
   --ui-spacing-md: 16px;
@@ -19,7 +19,7 @@
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--ui-success-color);
+  background: var(--ui-primary-highlighted-color);
 }
 
 ::-webkit-scrollbar-corner {

@@ -78,12 +78,12 @@
 }
 
 .input-success {
-  border-color: var(--ui-success-color);
+  border-color: var(--ui-primary-color);
 }
 
 .input-success:focus,
 .input-success:focus-visible {
-  border-color: var(--ui-success-color);
+  border-color: var(--ui-primary-color);
   box-shadow: 0 0 0 3px rgba(46, 124, 76, 0.15); 
   outline: none; 
 }
@@ -104,7 +104,7 @@
 }
 
 .input-icon-success {
-  color: var(--ui-success-color);
+  color: var(--ui-primary-color);
 }
 
 .input-message {
