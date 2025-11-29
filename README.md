@@ -2,15 +2,10 @@
 
 <div align="center">
 <a href="https://laxod.com">
-  <img width="212" src="https://github.com/user-attachments/assets/ae74a187-b46c-4643-aec6-8bf5d58baae4" alt="Laxod UI Logo" />
-    <p>
-    <a href="https://www.npmjs.com/package/laxod">
-      <img src="https://img.shields.io/npm/v/laxod?color=blue&label=npm" alt="npm version" />
-    </a>
-      <a href="https://www.npmjs.com/package/laxod">
-  <img src="https://img.shields.io/npm/dm/laxod?color=blue&label=downloads" alt="npm downloads" />
-  </a>
-</a>
+  <img width="212" src="https://github.com/user-attachments/assets/5490f7f0-f6a6-43b7-9d66-0e2db4b259fb" alt="Laxod UI Logo" />
+<p>
+    <a href="https://www.npmjs.com/package/laxod"><img src="https://img.shields.io/npm/v/laxod?color=blue&label=npm" alt="npm version" /></a>
+    <a href="https://www.npmjs.com/package/laxod"><img src="https://img.shields.io/npm/dm/laxod?color=blue&label=downloads" alt="npm downloads" /></a>
 
   </p>
   <h1>Laxod UI</h1>
